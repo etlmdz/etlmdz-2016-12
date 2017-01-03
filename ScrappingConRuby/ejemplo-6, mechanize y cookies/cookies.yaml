@@ -1,0 +1,15 @@
+---asdasdasd
+localhost:
+  "/":
+    _agenda_session: !ruby/object:Mechanize::Cookie
+      name: _agenda_session
+      value: NDExZ3BMVk9DMjRTYkwyRmM2STUrc0VUYk96SmVzUVdDQkFkcGhSQXFYQ3RmdWF5VlFyYUtGWFBjN2RaL0dzMWdxZlo5Wm9nU2NVNWxaK2NsZFZMNmhyOS9sSy9lK3NlODhvR3h1aFB5YmtHeUlsTGEvaWZWUGFycWU1OTIxNzdGUndqcGFCdVpMUlR6eThXTEZENWM5cVFQeTVXOWdVMHgwN0lpNUlCU0FNPS0tTUtOckcvSVBuVVk4UzM0eUVBaWdMZz09--8d99a0faf01abefbe79d85fd25daf11e4592da47
+      domain: localhost
+      for_domain: false
+      path: "/"
+      secure: false
+      httponly: true
+      expires: 
+      max_age: 
+      created_at: &1 2016-12-13 18:49:51.291519278 -03:00
+      accessed_at: *1

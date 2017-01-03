@@ -1,0 +1,28 @@
+source 'https://rubygems.org'
+
+#ruby '2.0.0', :patchlevel => '643'
+ruby '2.3.0'
+
+gem 'hirb'
+gem 'byebug'
+gem 'capybara'
+gem 'dsl'
+gem 'poltergeist'
+gem 'rspec-core'
+gem 'mechanize'
+
+gem 'pry'
+gem 'pry-byebug'
+
+# Para lanzar pry al saltar excepciones
+gem 'pry-rescue'
+gem 'pry-stack_explorer'
+
+gem 'mini_exiftool'
+gem 'sambal'
+
+gem 'sqlite3'
+gem 'activerecord'
+#apt-get install phantomjs y listo
+#gem 'phantomjs', :require => 'phantomjs/poltergeist'
+#
