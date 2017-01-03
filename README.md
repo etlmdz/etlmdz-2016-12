@@ -2,7 +2,8 @@
 ## Encuentro de Tecnologías Libres, Mendoza 2016 - Material de Disertantes
 
 ### Instrucciones
-* Solicitar invitación en el canal #ETLMdz not pushing de Telegram, para poder pushear aquí
+* Sacarse una cuenta en Github
+* Solicitar invitación en el canal *#ETLMdz not pushing*  de Telegram
 * Clonarse este repositorio, _y obtener de paso el material de los demas
   conferenciantes_ ;)
 ```
