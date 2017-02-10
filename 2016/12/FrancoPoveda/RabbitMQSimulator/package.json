@@ -1,0 +1,18 @@
+{
+  "name": "simulator",
+  "description": "rabbitmq simulator",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~3.0.6",
+    "ejs": "~0.8.3",
+    "ejs-locals": "~1.0.2",
+    "express-blocks": "~0.2.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.1.4",
+    "grunt-contrib-concat": "~0.1.2rc6",
+    "grunt": "~0.4.0rc7",
+    "grunt-contrib-copy": "~0.4.1"
+  }
+}
