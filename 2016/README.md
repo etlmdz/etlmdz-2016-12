@@ -6,7 +6,7 @@ Facultad de Ingeniería, Universidad de Mendoza
 Organizaron
 
 * Espacio de Tecnologías Libres Mendoza
-* Posgrados Universidad de Mendoza
+* [Dirección de Posgrados, Facultad de Ingeniería, Universidad de Mendoza](http://www.um.edu.ar/es/fi/carreras/posgrados-facultad-de-ingenieria.html)
 
 Auspició
 
