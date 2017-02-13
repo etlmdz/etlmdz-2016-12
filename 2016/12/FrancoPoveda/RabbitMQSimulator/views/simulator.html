@@ -1,0 +1,116 @@
+<% layout('layout') -%>
+      <h1>RabbitMQ Simulator</h1>
+      <p>Use the drawing area below to represent your messaging topology. Drag messaging elements from the toolbox on the left to the canvas. To connect nodes, hold the ALT key (or SHIFT key) and drag from a source node to connect it to a destination node.</p>
+      <div class="row">
+        <div id="btn-toolbar" class="btn-toolbar span8" style="margin-left: 40px;">
+          <div class="btn-group">
+            <button id="advanced_mode" class="btn btn-inverse">Advanced Mode</button>
+            <% if(expImpEnabled) { %>
+            <button id="import" class="btn">Import</button>
+            <button id="export" class="btn">Export</button>
+            <% } %>
+            <% if(playerEnabled) { %>
+            <button id="export-player" class="btn">To Player</button>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="sim" class="span8">
+	  <canvas id="Simulator" data-processing-sources="js/Simulator.pde"
+		  width="800" height="410">
+	    <p>Your browser does not support the canvas tag.</p>
+	  </canvas>
+	  <noscript>
+	    <p>JavaScript is required to view the contents of this page.</p>
+	  </noscript>
+        </div>
+        <div id="forms" class="span3">
+          <h3>Properties</h3>
+          <div id="inspector-msg">
+            <p>Click on an element inside the drawing area to display its properties or perform actions with it.</p>
+          </div>
+          <form id="edit_producer_form" class="hidden">
+            <fieldset>
+              <legend>Edit Producer</legend>
+              <input id="edit_producer_id" type="hidden" name="edit_producer_id">
+               <input id="edit_producer_name" name="name" type="text" placeholder="name">
+               <button id="producer_delete" type="button" class="btn btn-danger">Delete</button>
+              <button id="edit_producer_change" type="submit" class="btn btn-primary">Edit</button>
+            </fieldset>
+          </form>
+          <form id="edit_consumer_form" class="hidden">
+            <fieldset>
+              <legend>Edit Consumer</legend>
+              <input id="edit_consumer_id" type="hidden" name="edit_consumer_id">
+               <input id="edit_consumer_name" name="name" type="text" placeholder="name">
+               <button id="consumer_delete" type="button" class="btn btn-danger">Delete</button>
+              <button id="edit_consumer_change" type="submit" class="btn btn-primary">Edit</button>
+            </fieldset>
+          </form>
+          <form id="new_message_form" class="hidden">
+            <fieldset>
+              <legend>New Message</legend>
+              <input id="new_message_producer_id" type="hidden" name="new_message_producer_id">
+              <input id="new_message_producer_payload" name="payload" type="text" placeholder="payload">
+              <input id="new_message_producer_routing_key" name="routing_key" type="text" placeholder="routing key">
+              <input id="new_message_producer_seconds" name="seconds" type="text" placeholder="seconds">
+              <button id="new_message_stop" type="button" class="btn btn-danger">Stop</button>
+              <button id="new_message_send" type="submit" class="btn btn-primary">Send</button>
+            </fieldset>
+          </form>
+          <form id="bindings_form" class="hidden">
+            <fieldset>
+              <legend>Edit Binding</legend>
+              <input id="binding_id" type="hidden" name="binding_id">
+              <input id="binding_key" name="binding_key" type="text" placeholder="binding key">
+              <button id="binding_delete" type="button" class="btn btn-danger">Delete</button>
+              <button id="binding_change" type="submit" class="btn btn-primary">Change</button>
+            </fieldset>
+          </form>
+          <form id="queue_form" class="hidden">
+            <fieldset>
+              <legend>Edit Queue</legend>
+              <input id="queue_id" type="hidden" name="queue_id">
+              <input id="queue_name" name="queue_name" type="text" placeholder="queue name">
+              <button id="queue_delete" type="button" class="btn btn-danger">Delete</button>
+              <button id="queue_edit" type="submit" class="btn btn-primary">Edit</button>
+            </fieldset>
+          </form>
+          <form id="exchange_form" class="hidden">
+            <fieldset>
+              <legend>Edit Exchange</legend>
+              <input id="exchange_id" type="hidden" name="exchange_id">
+              <input id="exchange_name" name="exchange_name" type="text" placeholder="exchange name">
+              <select id="exchange_type">
+                <option value="0">direct</option>
+                <option value="1">fanout</option>
+                <option value="2">topic</option>
+              </select>
+              <button id="exchange_delete" type="button" class="btn btn-danger">Delete</button>
+              <button id="exchange_edit" type="submit" class="btn btn-primary">Edit</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h4>Message Log</h4>
+          <div id="msg-log"></div>
+        </div>
+      </div>
+      <div id="player-modal" class="modal hide fade">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3>JSON data for RabbitMQ Simulator Player</h3>
+        </div>
+        <div id="player-modal-code" class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <label class="checkbox" style="float: left;"><input id="pretty-print" type="checkbox">Pretty Print</label>
+          <button type="button" class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+      <div class="row">
+        <div id="tutorial" class="span12"></div>
+      </div>
